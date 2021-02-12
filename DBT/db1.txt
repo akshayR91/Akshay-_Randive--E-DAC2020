@@ -1,0 +1,137 @@
+--   02/12/2020  --
+create database demo_test;
+use demo_test;
+show databases;
+
+create table demo_tes (
+con int(4)
+);
+
+
+create table demo_test1 (
+con int(4),
+name varchar(20)
+);
+
+
+create database demo_test;
+
+show tables;
+
+
+
+desc demo_test;
+desc demo_test1;
+
+
+
+select * from demo_test1;
+ 
+ /*insert
+ update 
+ select
+*/
+
+insert into demo_test1(con, name) values(2,"patil");
+
+insert into demo_test1(con, name) values(2,"patil");
+
+insert into demo_test1 values(3,"singhal");
+
+insert into demo_test1(con) values(4);
+
+insert into demo_test1(con) values(2,"patil"); /* error*/
+insert into demo_test1(con,name) values(2,"patil"),(3,"a"),(6,"w"),(8,"hg"),(10,null);
+
+
+
+
+
+
+drop table demo_test1;
+drop database demo_test;
+
+
+
+
+
+use rokde;
+create table Edac ( S_id int(4) ,
+  S_name varchar(20),
+  S_addr varchar(20) 
+  );
+
+select * from edac;
+
+
+
+
+
+update edac set s_id=10 where S_name = "sumit" ;
+
+alter table edac add mob_no1 int(10);
+alter table edac add column mob_no1 int(10);
+
+show tables;
+create table Edac1 (
+S_id int(4) ,
+S_name varchar(20),
+S_addr varchar(20)
+);
+
+select s_id from edac;
+select * from edac;
+
+
+
+desc edac;
+
+/*not null , pk , fk , default , check */
+
+
+insert into edac values(1,"Sanjay", "India");
+
+insert into edac values(2,"shubham", "India");
+
+insert into edac values(3,"Rishikesh", "India");
+
+insert into edac values(1,"joshi", "India");
+
+
+insert into edac(S_id,S_name,S_Addr) values(5,"sai", "India");
+
+insert into edac(S_id,S_name,S_Addr) values(5,"Sai");
+insert into edac(S_id,S_name) values(5,"Sai", "India");
+
+insert into edac(S_id,S_name,S_Addr) values(5,"Sai", null);
+
+
+
+
+create table Edac2 (
+S_id int(4) not null,
+S_name varchar(20),
+S_addr varchar(20)
+);
+select * from edac2;
+desc edac2;
+insert into edac2 values(1,"Akshay", "India");
+insert into edac2 values("Sanjay", "India"); /* error */
+
+insert into edac2(S_name , S_addr) values("Sumit", "India");
+
+insert into edac2 values(null,"Sumit", "India");
+
+
+create table Edac2 (
+S_id int(4) primary key,
+S_name varchar(20),
+S_addr varchar(20)
+);
+select * from edac2;
+
+insert into edac2 values(1,"Akshay", "India");
+insert into edac2(s_name , s_addr) values("Sumit", "India");
+
+insert into edac2 values(2,"Akshay", "India");
+drop table edac2;
